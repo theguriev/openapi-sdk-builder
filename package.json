@@ -1,6 +1,6 @@
 {
   "name": "openapi-sdk-builder",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A way to quickly generate a client API",
   "author": "Eugen Guriev <gurievcreative@gmail.com>",
   "license": "MIT",

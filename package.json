@@ -1,0 +1,41 @@
+{
+  "name": "openapi-sdk-builder",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "sideEffects": false,
+  "bin": {
+    "openapi-sdk-builder": "dist/bin/index.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.47",
+    "openapi-typescript": "^5.4.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.8.4",
+    "yargs": "^17.5.1"
+  },
+  "scripts": {
+    "generate": "ts-node ./scripts/generate.ts",
+    "lint": "eslint --ext .ts,.vue src",
+    "build": "ts-node ./scripts/build && yarn build:ts",
+    "watch": "ts-node ./scripts/build --watch && build:ts:watch",
+    "build:ts": "tsc",
+    "build:ts:watch": "tsc -w",
+    "test": "openapi-sdk-builder"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23",
+    "@types/yargs": "^17.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1"
+  }
+}

@@ -1,8 +1,9 @@
 {
   "name": "openapi-sdk-builder",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A way to quickly generate a client API",
   "author": "Eugen Guriev <gurievcreative@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/theguriev/openapi-sdk-builder"
@@ -21,9 +22,12 @@
     "typescript": "^4.8.4",
     "yargs": "^17.5.1"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "generate": "ts-node ./scripts/generate.ts",
-    "lint": "eslint --ext .ts,.vue src",
+    "lint": "eslint --ext .ts,.js src",
     "build": "ts-node ./scripts/build && yarn build:ts && copyfiles ./bin ./dist/bin",
     "watch": "ts-node ./scripts/build --watch && build:ts:watch",
     "build:ts": "tsc",

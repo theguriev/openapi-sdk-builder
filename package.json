@@ -13,7 +13,7 @@
   "source": "src/index.ts",
   "sideEffects": false,
   "bin": {
-    "openapi-sdk-builder": "dist/bin/index.js"
+    "openapi-sdk-builder": "bin/index.js"
   },
   "dependencies": {
     "esbuild": "^0.14.47",
@@ -23,12 +23,13 @@
     "yargs": "^17.5.1"
   },
   "files": [
+    "bin",
     "dist"
   ],
   "scripts": {
     "generate": "ts-node ./scripts/generate.ts",
     "lint": "eslint --ext .ts,.js src",
-    "build": "ts-node ./scripts/build && yarn build:ts && copyfiles ./bin ./dist/bin",
+    "build": "ts-node ./scripts/build && yarn build:ts",
     "watch": "ts-node ./scripts/build --watch && build:ts:watch",
     "build:ts": "tsc",
     "build:ts:watch": "tsc -w",
@@ -39,7 +40,6 @@
     "@types/yargs": "^17.0.13",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
-    "copyfiles": "^2.4.1",
     "eslint": "^8.24.0",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
     "eslint-config-prettier": "^8.5.0",

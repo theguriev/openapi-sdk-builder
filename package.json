@@ -1,7 +1,12 @@
 {
   "name": "openapi-sdk-builder",
   "version": "0.0.1",
-  "description": "",
+  "description": "A way to quickly generate a client API",
+  "author": "Eugen Guriev <gurievcreative@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theguriev/openapi-sdk-builder"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "source": "src/index.ts",
